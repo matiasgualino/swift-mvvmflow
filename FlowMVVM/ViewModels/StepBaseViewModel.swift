@@ -9,14 +9,14 @@
 import Foundation
 import RxSwift
 
-class StepBaseViewModel: NSObject {
+class StepBaseViewModel<I>: NSObject {
     
     var next = PublishSubject<Bool>()
     var prev = PublishSubject<Bool>()
     
-    var flowInfo: FlowInfo
+    var flowInfo: I
     
-    init(flowInfo: FlowInfo) {
+    init(flowInfo: I) {
         self.flowInfo = flowInfo
     }
     

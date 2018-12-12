@@ -14,11 +14,11 @@ protocol StepManagerProtocol {
     func start(containerView: UIView)
 }
 
-class StepManager<T: RawRepresentable> where T.RawValue == Int {
+class StepManager<T: RawRepresentable, I> where T.RawValue == Int {
     
     var currentStep: T!
     var containerView: UIView!
-    var currentView: StepBaseView! {
+    var currentView: StepBaseView<I>! {
         didSet {
             oldValue?.animateOut()
             self.currentView?.animateIn()
@@ -60,11 +60,11 @@ class StepManager<T: RawRepresentable> where T.RawValue == Int {
         self.currentView = view
     }
     
-    func getView(forStep: T) -> StepBaseView? {
+    func getView(forStep: T) -> StepBaseView<I>? {
         return nil
     }
     
-    fileprivate func addObservers(viewModel: StepBaseViewModel) {
+    fileprivate func addObservers(viewModel: StepBaseViewModel<I>) {
         viewModel.next
             .asObservable()
             .observeOn(MainScheduler.instance)

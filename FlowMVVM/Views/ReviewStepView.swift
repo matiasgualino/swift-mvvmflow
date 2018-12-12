@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class ReviewStepView: StepBaseView {
+class ReviewStepView: StepBaseView<FlowInfo> {
     
     override func setup() {
         super.setup()

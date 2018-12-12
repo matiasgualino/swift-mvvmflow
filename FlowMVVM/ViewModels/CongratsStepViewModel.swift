@@ -8,6 +8,6 @@
 
 import Foundation
 
-class CongratsStepViewModel: StepBaseViewModel {
+class CongratsStepViewModel: StepBaseViewModel<FlowInfo> {
     
 }

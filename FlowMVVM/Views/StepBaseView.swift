@@ -9,9 +9,9 @@
 import Foundation
 import UIKit
 
-class StepBaseView {
+class StepBaseView<I> {
     
-    var viewModel : StepBaseViewModel! {
+    var viewModel : StepBaseViewModel<I>! {
         didSet {
             self.setup()
             self.bind()

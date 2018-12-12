@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class CongratsStepView : StepBaseView {
+class CongratsStepView : StepBaseView<FlowInfo> {
  
     override func setup() {
         super.setup()

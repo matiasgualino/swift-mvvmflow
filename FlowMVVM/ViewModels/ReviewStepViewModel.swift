@@ -8,6 +8,6 @@
 
 import Foundation
 
-class ReviewStepViewModel: StepBaseViewModel {
+class ReviewStepViewModel: StepBaseViewModel<FlowInfo> {
     
 }

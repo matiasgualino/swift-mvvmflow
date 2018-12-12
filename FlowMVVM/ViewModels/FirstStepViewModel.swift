@@ -9,19 +9,15 @@
 import Foundation
 import RxSwift
 
-class FirstStepViewModel : StepBaseViewModel {
+class FirstStepViewModel : StepBaseViewModel<FlowInfo>, UITextFieldDelegate {
     
     func continueWith(text: String) {
         self.flowInfo.email = text
         self.nextClicked()
     }
-}
-
-extension FirstStepViewModel: UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         self.continueWith(text: textField.text ?? "Empty")
         return true
     }
-    
 }

@@ -14,7 +14,7 @@ enum Steps : Int {
     static var firstStep = Steps.first
 }
 
-class CustomStepManager: StepManager<Steps> {
+class CustomStepManager: StepManager<Steps, FlowInfo> {
     fileprivate var flowInfo = FlowInfo()
     
     override init() {
@@ -23,7 +23,7 @@ class CustomStepManager: StepManager<Steps> {
         self.currentStep = Steps.firstStep
     }
     
-    override func getView(forStep: Steps) -> StepBaseView? {
+    override func getView(forStep: Steps) -> StepBaseView<FlowInfo>? {
         switch(forStep) {
         case .first:
             let firstView = FirstStepView(containerView: self.containerView)
