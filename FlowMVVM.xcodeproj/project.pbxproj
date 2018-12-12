@@ -1,0 +1,462 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0FA52B0021C0B59200543362 /* CustomStepManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA52AFF21C0B59200543362 /* CustomStepManager.swift */; };
+		660F1D7121C0057E00FCD21F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660F1D7021C0057E00FCD21F /* AppDelegate.swift */; };
+		660F1D7321C0057E00FCD21F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660F1D7221C0057E00FCD21F /* ViewController.swift */; };
+		660F1D7821C0057F00FCD21F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 660F1D7721C0057F00FCD21F /* Assets.xcassets */; };
+		660F1D7B21C0057F00FCD21F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 660F1D7921C0057F00FCD21F /* LaunchScreen.storyboard */; };
+		660F1D8321C034A700FCD21F /* StepManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660F1D8221C034A700FCD21F /* StepManager.swift */; };
+		660F1D8521C034E200FCD21F /* StepBaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660F1D8421C034E200FCD21F /* StepBaseViewModel.swift */; };
+		660F1D8721C034F300FCD21F /* StepBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660F1D8621C034F300FCD21F /* StepBaseView.swift */; };
+		660F1D8921C0356900FCD21F /* FlowInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660F1D8821C0356900FCD21F /* FlowInfo.swift */; };
+		660F1D8B21C0460700FCD21F /* FlowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660F1D8A21C0460700FCD21F /* FlowViewController.swift */; };
+		660F1D8E21C056D100FCD21F /* FirstStepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660F1D8D21C056D100FCD21F /* FirstStepView.swift */; };
+		660F1D9221C057AE00FCD21F /* ReviewStepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660F1D9121C057AE00FCD21F /* ReviewStepView.swift */; };
+		660F1D9421C057C200FCD21F /* CongratsStepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660F1D9321C057C200FCD21F /* CongratsStepView.swift */; };
+		660F1D9721C0582800FCD21F /* FirstStepViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660F1D9621C0582800FCD21F /* FirstStepViewModel.swift */; };
+		660F1D9B21C0585B00FCD21F /* ReviewStepViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660F1D9A21C0585B00FCD21F /* ReviewStepViewModel.swift */; };
+		660F1D9D21C0587700FCD21F /* CongratsStepViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660F1D9C21C0587700FCD21F /* CongratsStepViewModel.swift */; };
+		B60E5BEE3EDA14CFC1413E61 /* Pods_FlowMVVM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C92B17D76CAF93A20EEBFCB /* Pods_FlowMVVM.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0AA80A286C1AD13A8C99B2D4 /* Pods-FlowMVVM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlowMVVM.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FlowMVVM/Pods-FlowMVVM.debug.xcconfig"; sourceTree = "<group>"; };
+		0CB25820ED2FAFC8ECF2BAED /* Pods-FlowMVVM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlowMVVM.release.xcconfig"; path = "Pods/Target Support Files/Pods-FlowMVVM/Pods-FlowMVVM.release.xcconfig"; sourceTree = "<group>"; };
+		0FA52AFF21C0B59200543362 /* CustomStepManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomStepManager.swift; sourceTree = "<group>"; };
+		3C92B17D76CAF93A20EEBFCB /* Pods_FlowMVVM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlowMVVM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		660F1D6D21C0057E00FCD21F /* FlowMVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlowMVVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		660F1D7021C0057E00FCD21F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		660F1D7221C0057E00FCD21F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		660F1D7721C0057F00FCD21F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		660F1D7A21C0057F00FCD21F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		660F1D7C21C0057F00FCD21F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		660F1D8221C034A700FCD21F /* StepManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepManager.swift; sourceTree = "<group>"; };
+		660F1D8421C034E200FCD21F /* StepBaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepBaseViewModel.swift; sourceTree = "<group>"; };
+		660F1D8621C034F300FCD21F /* StepBaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepBaseView.swift; sourceTree = "<group>"; };
+		660F1D8821C0356900FCD21F /* FlowInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowInfo.swift; sourceTree = "<group>"; };
+		660F1D8A21C0460700FCD21F /* FlowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowViewController.swift; sourceTree = "<group>"; };
+		660F1D8D21C056D100FCD21F /* FirstStepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstStepView.swift; sourceTree = "<group>"; };
+		660F1D9121C057AE00FCD21F /* ReviewStepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewStepView.swift; sourceTree = "<group>"; };
+		660F1D9321C057C200FCD21F /* CongratsStepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CongratsStepView.swift; sourceTree = "<group>"; };
+		660F1D9621C0582800FCD21F /* FirstStepViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstStepViewModel.swift; sourceTree = "<group>"; };
+		660F1D9A21C0585B00FCD21F /* ReviewStepViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewStepViewModel.swift; sourceTree = "<group>"; };
+		660F1D9C21C0587700FCD21F /* CongratsStepViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CongratsStepViewModel.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		660F1D6A21C0057E00FCD21F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B60E5BEE3EDA14CFC1413E61 /* Pods_FlowMVVM.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		660F1D6421C0057E00FCD21F = {
+			isa = PBXGroup;
+			children = (
+				660F1D6F21C0057E00FCD21F /* FlowMVVM */,
+				660F1D6E21C0057E00FCD21F /* Products */,
+				E1F1D20DA1B552E224A85E46 /* Pods */,
+				DDC20B8860AFDF3946EC5D8C /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		660F1D6E21C0057E00FCD21F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				660F1D6D21C0057E00FCD21F /* FlowMVVM.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		660F1D6F21C0057E00FCD21F /* FlowMVVM */ = {
+			isa = PBXGroup;
+			children = (
+				660F1D9521C0580300FCD21F /* ViewModels */,
+				660F1D8C21C056B700FCD21F /* Views */,
+				660F1D7021C0057E00FCD21F /* AppDelegate.swift */,
+				660F1D7221C0057E00FCD21F /* ViewController.swift */,
+				660F1D7721C0057F00FCD21F /* Assets.xcassets */,
+				660F1D7921C0057F00FCD21F /* LaunchScreen.storyboard */,
+				660F1D7C21C0057F00FCD21F /* Info.plist */,
+				660F1D8221C034A700FCD21F /* StepManager.swift */,
+				660F1D8821C0356900FCD21F /* FlowInfo.swift */,
+				660F1D8A21C0460700FCD21F /* FlowViewController.swift */,
+				0FA52AFF21C0B59200543362 /* CustomStepManager.swift */,
+			);
+			path = FlowMVVM;
+			sourceTree = "<group>";
+		};
+		660F1D8C21C056B700FCD21F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				660F1D8621C034F300FCD21F /* StepBaseView.swift */,
+				660F1D8D21C056D100FCD21F /* FirstStepView.swift */,
+				660F1D9121C057AE00FCD21F /* ReviewStepView.swift */,
+				660F1D9321C057C200FCD21F /* CongratsStepView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		660F1D9521C0580300FCD21F /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				660F1D8421C034E200FCD21F /* StepBaseViewModel.swift */,
+				660F1D9621C0582800FCD21F /* FirstStepViewModel.swift */,
+				660F1D9A21C0585B00FCD21F /* ReviewStepViewModel.swift */,
+				660F1D9C21C0587700FCD21F /* CongratsStepViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		DDC20B8860AFDF3946EC5D8C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3C92B17D76CAF93A20EEBFCB /* Pods_FlowMVVM.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E1F1D20DA1B552E224A85E46 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0AA80A286C1AD13A8C99B2D4 /* Pods-FlowMVVM.debug.xcconfig */,
+				0CB25820ED2FAFC8ECF2BAED /* Pods-FlowMVVM.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		660F1D6C21C0057E00FCD21F /* FlowMVVM */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 660F1D7F21C0057F00FCD21F /* Build configuration list for PBXNativeTarget "FlowMVVM" */;
+			buildPhases = (
+				C0746C795D6E913C21904CDB /* [CP] Check Pods Manifest.lock */,
+				660F1D6921C0057E00FCD21F /* Sources */,
+				660F1D6A21C0057E00FCD21F /* Frameworks */,
+				660F1D6B21C0057E00FCD21F /* Resources */,
+				527D3273FFEF586B6440A246 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FlowMVVM;
+			productName = FlowMVVM;
+			productReference = 660F1D6D21C0057E00FCD21F /* FlowMVVM.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		660F1D6521C0057E00FCD21F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1000;
+				LastUpgradeCheck = 1000;
+				ORGANIZATIONNAME = "Matias Gualino";
+				TargetAttributes = {
+					660F1D6C21C0057E00FCD21F = {
+						CreatedOnToolsVersion = 10.0;
+					};
+				};
+			};
+			buildConfigurationList = 660F1D6821C0057E00FCD21F /* Build configuration list for PBXProject "FlowMVVM" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 660F1D6421C0057E00FCD21F;
+			productRefGroup = 660F1D6E21C0057E00FCD21F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				660F1D6C21C0057E00FCD21F /* FlowMVVM */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		660F1D6B21C0057E00FCD21F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				660F1D7B21C0057F00FCD21F /* LaunchScreen.storyboard in Resources */,
+				660F1D7821C0057F00FCD21F /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		527D3273FFEF586B6440A246 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-FlowMVVM/Pods-FlowMVVM-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FlowMVVM/Pods-FlowMVVM-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C0746C795D6E913C21904CDB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FlowMVVM-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		660F1D6921C0057E00FCD21F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				660F1D8321C034A700FCD21F /* StepManager.swift in Sources */,
+				660F1D8B21C0460700FCD21F /* FlowViewController.swift in Sources */,
+				660F1D9721C0582800FCD21F /* FirstStepViewModel.swift in Sources */,
+				0FA52B0021C0B59200543362 /* CustomStepManager.swift in Sources */,
+				660F1D8721C034F300FCD21F /* StepBaseView.swift in Sources */,
+				660F1D9221C057AE00FCD21F /* ReviewStepView.swift in Sources */,
+				660F1D9421C057C200FCD21F /* CongratsStepView.swift in Sources */,
+				660F1D8521C034E200FCD21F /* StepBaseViewModel.swift in Sources */,
+				660F1D8921C0356900FCD21F /* FlowInfo.swift in Sources */,
+				660F1D9B21C0585B00FCD21F /* ReviewStepViewModel.swift in Sources */,
+				660F1D8E21C056D100FCD21F /* FirstStepView.swift in Sources */,
+				660F1D7321C0057E00FCD21F /* ViewController.swift in Sources */,
+				660F1D9D21C0587700FCD21F /* CongratsStepViewModel.swift in Sources */,
+				660F1D7121C0057E00FCD21F /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		660F1D7921C0057F00FCD21F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				660F1D7A21C0057F00FCD21F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		660F1D7D21C0057F00FCD21F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		660F1D7E21C0057F00FCD21F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		660F1D8021C0057F00FCD21F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0AA80A286C1AD13A8C99B2D4 /* Pods-FlowMVVM.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BTW54CGR6F;
+				INFOPLIST_FILE = FlowMVVM/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.FlowMVVM;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		660F1D8121C0057F00FCD21F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0CB25820ED2FAFC8ECF2BAED /* Pods-FlowMVVM.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BTW54CGR6F;
+				INFOPLIST_FILE = FlowMVVM/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.FlowMVVM;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		660F1D6821C0057E00FCD21F /* Build configuration list for PBXProject "FlowMVVM" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				660F1D7D21C0057F00FCD21F /* Debug */,
+				660F1D7E21C0057F00FCD21F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		660F1D7F21C0057F00FCD21F /* Build configuration list for PBXNativeTarget "FlowMVVM" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				660F1D8021C0057F00FCD21F /* Debug */,
+				660F1D8121C0057F00FCD21F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 660F1D6521C0057E00FCD21F /* Project object */;
+}
