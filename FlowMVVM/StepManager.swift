@@ -17,9 +17,8 @@ protocol StepManagerProtocol {
 class StepManager<T: RawRepresentable> where T.RawValue == Int {
     
     var currentStep: T!
-    
     var containerView: UIView!
-    fileprivate var currentView: StepBaseView! {
+    var currentView: StepBaseView! {
         didSet {
             oldValue?.animateOut()
             self.currentView?.animateIn()
@@ -50,19 +49,18 @@ class StepManager<T: RawRepresentable> where T.RawValue == Int {
     }
     
     fileprivate func setView(forStep: T) {
-        guard let viewAndViewModel = self.getViewAndViewModel(forStep: forStep) else {
+        guard let view = self.getView(forStep: forStep) else {
             self.flowAbort.onNext(true)
             return
         }
         
-        self.addObservers(viewModel: viewAndViewModel.1)
-        viewAndViewModel.0.viewModel = viewAndViewModel.1
+        self.addObservers(viewModel: view.viewModel)
         
         self.currentStep = forStep
-        self.currentView = viewAndViewModel.0
+        self.currentView = view
     }
     
-    func getViewAndViewModel(forStep: T) -> (StepBaseView, StepBaseViewModel)? {
+    func getView(forStep: T) -> StepBaseView? {
         return nil
     }
     
