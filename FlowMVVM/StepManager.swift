@@ -16,9 +16,11 @@ protocol StepManagerProtocol {
 
 class StepManager<T: RawRepresentable, I> where T.RawValue == Int {
     
+    fileprivate var stackViews = [StepBaseView<T, I>]()
+    
     var currentStep: T!
     var containerView: UIView!
-    var currentView: StepBaseView<I>! {
+    var currentView: StepBaseView<T, I>! {
         didSet {
             oldValue?.animateOut()
             self.currentView?.animateIn()
@@ -49,18 +51,32 @@ class StepManager<T: RawRepresentable, I> where T.RawValue == Int {
     }
     
     fileprivate func setView(forStep: T) {
-        guard let view = self.getView(forStep: forStep) else {
-            self.flowAbort.onNext(true)
-            return
+        if let index = self.stackViews.lastIndex(where: { $0.step! == forStep }) {
+            self.currentStep = forStep
+            
+            while (self.stackViews.count > index+1) {
+                let lastView = self.stackViews.removeLast()
+                lastView.animateOut()
+                lastView.removeFromSuperview()
+            }
+            
+            self.currentView = self.stackViews[index]
+        } else {
+            guard let view = self.getView(forStep: forStep) else {
+                self.flowAbort.onNext(true)
+                return
+            }
+            
+            self.addObservers(viewModel: view.viewModel)
+            
+            self.stackViews.append(view)
+            
+            self.currentStep = forStep
+            self.currentView = view
         }
-        
-        self.addObservers(viewModel: view.viewModel)
-        
-        self.currentStep = forStep
-        self.currentView = view
     }
     
-    func getView(forStep: T) -> StepBaseView<I>? {
+    func getView(forStep: T) -> StepBaseView<T, I>? {
         return nil
     }
     

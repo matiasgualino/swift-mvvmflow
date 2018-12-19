@@ -9,7 +9,9 @@
 import Foundation
 import UIKit
 
-class FirstStepView : StepBaseView<FlowInfo> {
+class FirstStepView : StepBaseView<Steps, FlowInfo> {
+    
+    override var step: Steps? { get { return Steps.first } }
     
     override func setup() {
         super.setup()
@@ -21,12 +23,12 @@ class FirstStepView : StepBaseView<FlowInfo> {
     fileprivate func prepareTextField() {
         let textField = UITextField()
         textField.translatesAutoresizingMaskIntoConstraints = false
-        self.view.addSubview(textField)
+        self.containerView.addSubview(textField)
         
         NSLayoutConstraint.activate([
-            textField.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
-            textField.widthAnchor.constraint(equalTo: self.view.widthAnchor, multiplier: 0.7),
-            textField.centerYAnchor.constraint(equalTo: self.view.centerYAnchor),
+            textField.centerXAnchor.constraint(equalTo: self.containerView.centerXAnchor),
+            textField.widthAnchor.constraint(equalTo: self.containerView.widthAnchor, multiplier: 0.7),
+            textField.centerYAnchor.constraint(equalTo: self.containerView.centerYAnchor),
             ])
         
         textField.keyboardType = .emailAddress
@@ -44,6 +46,7 @@ class FirstStepView : StepBaseView<FlowInfo> {
             ])
         textField.delegate = self.viewModel as? FirstStepViewModel
         
+        self.subviews.append(textField)
         self.textField = textField
     }
     
@@ -51,4 +54,7 @@ class FirstStepView : StepBaseView<FlowInfo> {
         (self.viewModel as? FirstStepViewModel)?.continueWith(text: self.textField.text ?? "Empty")
     }
     
+    override func removeFromSuperview() {
+        self.textField?.removeFromSuperview()
+    }
 }

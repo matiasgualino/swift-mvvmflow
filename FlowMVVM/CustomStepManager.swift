@@ -23,19 +23,22 @@ class CustomStepManager: StepManager<Steps, FlowInfo> {
         self.currentStep = Steps.firstStep
     }
     
-    override func getView(forStep: Steps) -> StepBaseView<FlowInfo>? {
+    override func getView(forStep: Steps) -> StepBaseView<Steps, FlowInfo>? {
         switch(forStep) {
         case .first:
             let firstView = FirstStepView(containerView: self.containerView)
             firstView.viewModel = FirstStepViewModel(flowInfo: self.flowInfo)
+            self.currentStep = firstView.step
             return firstView
         case .review:
             let reviewView = ReviewStepView(containerView: self.containerView)
             reviewView.viewModel = ReviewStepViewModel(flowInfo: self.flowInfo)
+            self.currentStep = reviewView.step
             return reviewView
         case .congrats:
             let congratsView = CongratsStepView(containerView: self.containerView)
             congratsView.viewModel = CongratsStepViewModel(flowInfo: self.flowInfo)
+            self.currentStep = congratsView.step
             return congratsView
         }
     }

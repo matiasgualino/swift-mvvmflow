@@ -9,7 +9,9 @@
 import Foundation
 import UIKit
 
-class ReviewStepView: StepBaseView<FlowInfo> {
+class ReviewStepView: StepBaseView<Steps, FlowInfo> {
+    
+    override var step: Steps? { get { return Steps.review } }
     
     override func setup() {
         super.setup()
@@ -21,12 +23,12 @@ class ReviewStepView: StepBaseView<FlowInfo> {
     fileprivate func prepareReviewLabel() {
         let reviewLabel = UILabel()
         reviewLabel.translatesAutoresizingMaskIntoConstraints = false
-        self.view.addSubview(reviewLabel)
+        self.containerView.addSubview(reviewLabel)
         
         NSLayoutConstraint.activate([
-            reviewLabel.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
-            reviewLabel.widthAnchor.constraint(equalTo: self.view.widthAnchor, multiplier: 0.7),
-            reviewLabel.centerYAnchor.constraint(equalTo: self.view.centerYAnchor),
+            reviewLabel.centerXAnchor.constraint(equalTo: self.containerView.centerXAnchor),
+            reviewLabel.widthAnchor.constraint(equalTo: self.containerView.widthAnchor, multiplier: 0.7),
+            reviewLabel.centerYAnchor.constraint(equalTo: self.containerView.centerYAnchor),
             ])
         
         reviewLabel.font = UIFont.systemFont(ofSize: 18)
@@ -35,7 +37,11 @@ class ReviewStepView: StepBaseView<FlowInfo> {
         reviewLabel.numberOfLines = 0
         reviewLabel.text = "FLOW DATA: \n \(self.viewModel.flowInfo.email ?? "Cannot load")"
         
+        self.subviews.append(reviewLabel)
         self.reviewLabel = reviewLabel
     }
     
+    override func removeFromSuperview() {
+        self.reviewLabel?.removeFromSuperview()
+    }
 }
